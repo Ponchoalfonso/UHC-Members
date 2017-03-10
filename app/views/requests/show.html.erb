@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @request.age %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @request.nickname %>
+</p>
+
+<p>
+  <strong>Minecraftuuid:</strong>
+  <%= @request.minecraftUUID %>
+</p>
+
+<p>
+  <strong>Foundus:</strong>
+  <%= @request.foundUs %>
+</p>
+
+<p>
+  <strong>Requestreason:</strong>
+  <%= @request.requestReason %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @request.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @request.ip %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>
