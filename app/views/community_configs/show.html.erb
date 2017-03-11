@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @community_config.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @community_config.description %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @community_config.about %>
+</p>
+
+<p>
+  <strong>Backgroundone:</strong>
+  <%= @community_config.backgroundOne %>
+</p>
+
+<p>
+  <strong>Backgroundtwo:</strong>
+  <%= @community_config.backgroundTwo %>
+</p>
+
+<p>
+  <strong>Backgroundthree:</strong>
+  <%= @community_config.backgroundThree %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag @community_config.logo.url(:large) %>
+</p>
+
+<%= link_to 'Edit', edit_community_config_path(@community_config) %> |
+<%= link_to 'Back', community_configs_path %>

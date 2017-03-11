@@ -1,0 +1,54 @@
+<!-- Encabezado !-->
+<%= render 'layouts/header' %>
+
+<!-- Cuerpo !-->
+<section class="homepage">
+
+  <!-- Presentación !-->
+  <div class="presentation">
+    <div class="title">
+      <h1><%= @communityConfig.name %></h1>
+    </div>
+    <div class="descriptrion">
+      <p><%= @communityConfig.description %></p>
+    </div>
+  </div>
+
+  <!-- Acerca de la comunidad !-->
+  <div class="about">
+    <h2>Sobre nosotros</h2>
+    <p class="about-content"><%= @communityConfig.about %></p>
+    <!-- TODO agregar campo para imagen !-->
+  </div>
+
+  <!-- Información !-->
+  <div class="info">
+    <div class="info-container at-right"><!-- TODO Recuerda que también hay que crear at-left !-->
+      <h3 class="info-title">Título de info</h3>
+      <p class="info-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="info-phrase">Frase de info</p>
+      <a href="#">Link de info</a>
+    </div>
+  </div>
+
+  <!-- Noticias !-->
+  <div class="news flex">
+    <div class="news-container">
+      <h4 class="news-title">Título de noticia</h4>
+      <p class="news-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <!-- TODO Condicionar si existe un enlace y agregarlo si lo hay!-->
+    </div>
+    <!-- TODO agregar campo para imagen !-->
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <ul>
+        <li>Autor: Alfonso Valencia</li>
+        <li>Ultra-Hardcore Latinoamérica</li>
+        <li>License: Not defined yet</li>
+      </ul>
+    </div>
+  </footer>
+
+</section>

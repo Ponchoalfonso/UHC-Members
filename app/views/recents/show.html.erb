@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @recent.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @recent.body %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @recent.author %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag @recent.photo.url(:large) %>
+</p>
+
+<%= link_to 'Edit', edit_recent_path(@recent) %> |
+<%= link_to 'Back', recents_path %>

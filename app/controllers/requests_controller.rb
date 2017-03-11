@@ -1,5 +1,8 @@
+require 'curb'
+require 'oj'
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_member!
 
   # GET /requests
   # GET /requests.json
@@ -26,8 +29,19 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
 
+    #Calculamos los valores restantes
+    #Curl obtiene un string con la informacion que le proporciona la api de mojang
+    mojangData = Curl.get("https://api.mojang.com/users/profiles/minecraft/Ponchoalfonso").body_str
+    #Oj convierte el string que tenemos un hash el cual podemos manipular
+    minecraftUser = Oj.load(mojangData)
+    #Colocamos los valores faltantes
+    @request.minecraftUUID = minecraftUser["id"]
+    @request.ip = request.remote_ip
+    @request.status = "Pendiente"
+
     respond_to do |format|
       if @request.save
+        session[:requesting_user_id] = @request.id
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
         format.json { render :show, status: :created, location: @request }
       else
