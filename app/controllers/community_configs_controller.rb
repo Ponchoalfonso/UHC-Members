@@ -1,5 +1,6 @@
 class CommunityConfigsController < ApplicationController
   before_action :set_community_config, only: [:show, :edit, :update, :destroy]
+  before_action :set_configs
   before_action :authenticate_member!
 
   # GET /community_configs
@@ -72,4 +73,9 @@ class CommunityConfigsController < ApplicationController
     def community_config_params
       params.require(:community_config).permit(:name, :description, :about, :backgroundOne, :backgroundTwo, :backgroundThree, :logo)
     end
+
+    def set_configs
+      @communityConfig = CommunityConfig.first
+    end
+
 end

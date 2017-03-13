@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MinecraftCommunity</title>
+    <title><%= CommunityConfig.first.name %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700,300" rel="stylesheet" type="text/css"/>
+    <%= favicon_link_tag %>
   </head>
 
   <body>
@@ -14,5 +15,6 @@
     <p class="alert"><%= alert %></p>
     !-->
     <%= yield %>
+    <span class="icon-circle-up back-top hidden" id="back-top"></span>
   </body>
 </html>

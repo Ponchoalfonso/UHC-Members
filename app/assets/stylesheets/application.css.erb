@@ -1,0 +1,266 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+   box-sizing: border-box;
+   text-decoration: none;
+   padding: 0px;
+   margin: 0px;
+   font-family: 'Oxygen', sans-serif;
+ }
+
+ h1, h2, h3, h4{
+   margin: 0;
+ }
+
+ .flex{
+   display: flex;
+ }
+
+ .hidden{
+   display: none;
+ }
+
+ .back-top{
+   cursor: pointer;
+   position: fixed;
+   bottom: 2%;
+   right: 2%;
+   font-size: 2.2em;
+   color: white;
+ }
+
+/* Estilos de encabezado */
+ header{
+   position: fixed;
+   color: white;
+   background-color: #2e3842;
+   width: 100%;
+ }
+
+/* Barra de navegación */
+ header ul li{
+   display: inline-block;
+   padding-right: 0.6em;
+   padding-left: 0.6em;
+ }
+
+ header ul{
+   padding: 1em;
+   margin: auto;
+ }
+
+ header .navigation li a{
+   font-size: 0.95em;
+   color: white;
+ }
+
+ header .navigation li a:hover{
+   -webkit-transition: all 300ms ease;
+   -o-transition: all 300ms ease;
+   transition: all 300ms ease;
+   color: #a0def7;
+ }
+
+/* Navegación para el miembro*/
+.member-navigation{
+  cursor: pointer;
+}
+
+ .member-navigation h2{
+   font-size: 0.95em;
+   padding: 1em;
+ }
+
+ .member-navigation a{
+   -webkit-transition: all 300ms ease;
+   -o-transition: all 300ms ease;
+   transition: all 300ms ease;
+   color: white;
+   font-size: 0.95em;
+   font-weight: bold;
+   padding: 1em;
+ }
+
+ .member-navigation a:hover{
+   -webkit-transition: all 300ms ease;
+   -o-transition: all 300ms ease;
+   transition: all 300ms ease;
+   color: #a0def7;
+ }
+
+ .member-navigation img{
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-left: 1em;
+   width: 1.6em;
+   height: 1.6em;
+   overflow: hidden;
+   border-radius: 4px;
+ }
+
+/* Nombre del sitio en la barra de navegación */
+ .web-title img{
+   margin-top: auto;
+   margin-bottom: auto;
+   margin-left: 1em;
+   width: 2em;
+   height: 2em;
+  }
+
+ .web-title h1{
+   font-size: 1em;
+   padding: 1em;
+ }
+
+ /* Opciones para el no miembro */
+ .not-member{
+   position: fixed;
+   top: 55px;
+   right: 4px;
+   color: white;
+   font-size: 0.6em;
+   background-color: #2e3842;
+   width: 10%;
+   text-align: center;
+   border: solid 2px #28323c;
+   border-radius: 6px;
+ }
+
+ .not-member h3{
+   padding: 0.2em;
+ }
+
+/* Opciones de navegación para el miembro */
+ .member-options{
+   position: fixed;
+   width: 20%;
+   padding: 1em;
+   background-color: #2e3842;
+   top: 52px;
+   right: 0px;
+   border-bottom: 2px solid #222930;
+   border-left: 2px solid #222930;
+ }
+
+
+.member-options ul li{
+  display: block;
+  text-align: right;
+  padding: 0.6em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+ .member-options ul li a, .member-options ul li span{
+   -webkit-transition: all 300ms ease;
+   -o-transition: all 300ms ease;
+   transition: all 300ms ease;
+   color: white;
+   padding: 0.3em;
+ }
+
+ .member-options ul li a:hover{
+   -webkit-transition: all 300ms ease;
+   -o-transition: all 300ms ease;
+   transition: all 300ms ease;
+   color: #a0def7;
+ }
+
+ footer{
+   height: 100vh;
+   background: url(<%= asset_path 'Back-Ground-0.png' %>);
+   background-position:50% 50%;
+   background-size:cover;
+   background-attachment: fixed;
+ }
+
+ .footer-container{
+   text-align: center;
+   position: relative;
+   width: 100%;
+   height: 50%;
+   top: 50%;
+   background-color: rgba(0, 0, 0, 0.75);
+ }
+
+ .footer-container ul li{
+   padding: 1em;
+   display: inline-block;
+ }
+
+.footer-container .list-links{
+  cursor: pointer;
+  font-size: 2em;
+  padding-top: 5%;
+}
+
+.footer-container .list-links li a{
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: white;
+}
+
+.footer-container .list-links li a:hover{
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: #a0def7;
+}
+
+.footer-container .list-info{
+  padding-top: 0%;
+}
+
+ .footer-container .list-info .mid{
+   border-left: solid 2px rgba(255, 255, 255, 0.6);
+   border-right: solid 2px rgba(255, 255, 255, 0.6);
+ }
+
+ .button{
+   cursor: pointer;
+   border-radius: 0.1em;
+   text-align: center;
+   border: none;
+   font-weight: 400;
+   font-size: 1.2em;
+   padding: 0.6em;
+ }
+
+ .container{
+   text-align: center;
+   width: 80%;
+   margin: auto;
+ }
+
+ .container h3{
+   font-size: 1.8em;
+   border-bottom: solid 2px;
+   width: 60%;
+   margin: auto;
+   padding: 0.6em;
+   border-color: rgba(0, 0, 0, 0.125);
+ }
+
+ .container p{
+   padding-top: 1.5em;
+   line-height: 1.5em;
+   color: rgba(255, 255, 255, 0.8);
+   margin-bottom: 1em;
+   margin-right: auto;
+   margin-left: auto;
+   width: 70%;
+ }

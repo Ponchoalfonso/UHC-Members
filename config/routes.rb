@@ -5,5 +5,10 @@ Rails.application.routes.draw do
   resources :requests
 
   root 'community#index'
+
+  #Routes for community controller
+  get '/inicio' => 'community#index'
+  get '/miembros/:nickname' => 'community#show', as: :miembro
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

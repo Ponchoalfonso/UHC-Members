@@ -1,9 +1,41 @@
-<header>
-  <ul>
-    <li>Inicio</li>
-    <li>Miembros</li>
-    <li>Eventos</li>
-    <li>Noticias</li>
-    <li>Contacto</li>
+<header class="flex">
+  <div class="web-title flex">
+    <%= image_tag CommunityConfig.first.logo(:thumb), :class => 'logo img-1' %>
+    <%= image_tag 'Creeper-icon.png', :class => 'logo img-2 hidden'%>
+    <%= image_tag 'Tnt-icon.png', :class => 'logo img-3 hidden'%>
+    <%= image_tag 'Grass-icon.png', :class => 'logo img-4 hidden'%>
+    <%= image_tag 'Enderman-icon.png', :class => 'logo img-5 hidden'%>
+    <h1><%= @communityConfig.name %></h1>
+  </div>
+  <ul class="navigation">
+    <li><a href="/inicio">Inicio</a></li>
+    <li><a href="#">Miembros</a></li>
+    <li><a href="#">Eventos</a></li>
+    <li><a href="#">Noticias</a></li>
+    <li><a href="#">Contacto</a></li>
   </ul>
+  <% if member_signed_in? %>
+    <div class="member-navigation flex" id="member-navigation">
+      <img src="http://cravatar.eu/avatar/<%= current_member.minecraftUUID%>.png" alt="">
+      <h2><%= current_member.nickname %></h2>
+    </div>
+  <% else %>
+    <div class="member-navigation flex not-signed-in">
+      <img src="http://cravatar.eu/avatar/steve.png" alt="">
+      <%= link_to 'Iniciar sesión', new_member_session_path %>
+    </div>
+  <% end %>
 </header>
+<% if member_signed_in? %>
+  <div class="member-options hidden" id="member-options">
+    <ul>
+      <li class="flex"><%= link_to 'Perfil', miembro_url(current_member.nickname) %><span class="icon-user"></span></li>
+      <li class="flex"><%= link_to 'Editar cuenta', edit_member_registration_path %><span class="icon-cog"></span></li>
+      <li class="flex"><%= link_to 'Cerrar sesión', destroy_member_session_path, method: :delete %><span class="icon-cross"></span></li>
+    </ul>
+  </div>
+<% else %>
+  <div class="not-member hidden">
+    <h3>Necesitas ser meimbro</h3>
+  </div>
+<% end %>
