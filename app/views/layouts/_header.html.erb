@@ -1,10 +1,10 @@
 <header class="flex">
   <div class="web-title flex">
     <%= image_tag CommunityConfig.first.logo(:thumb), :class => 'logo img-1' %>
-    <%= image_tag 'Creeper-icon.png', :class => 'logo img-2 hidden'%>
-    <%= image_tag 'Tnt-icon.png', :class => 'logo img-3 hidden'%>
-    <%= image_tag 'Grass-icon.png', :class => 'logo img-4 hidden'%>
-    <%= image_tag 'Enderman-icon.png', :class => 'logo img-5 hidden'%>
+    <%= image_tag 'minecraft-icons/flat/creeper.png', :class => 'logo img-2 hidden'%>
+    <%= image_tag 'minecraft-icons/flat/tnt.png', :class => 'logo img-3 hidden'%>
+    <%= image_tag 'minecraft-icons/flat/Grass.png', :class => 'logo img-4 hidden'%>
+    <%= image_tag 'minecraft-icons/flat/enderman.png', :class => 'logo img-5 hidden'%>
     <h1><%= @communityConfig.name %></h1>
   </div>
   <ul class="navigation">
@@ -16,12 +16,12 @@
   </ul>
   <% if member_signed_in? %>
     <div class="member-navigation flex" id="member-navigation">
-      <img src="http://cravatar.eu/avatar/<%= current_member.minecraftUUID%>.png" alt="">
+      <img src="http://cravatar.eu/avatar/<%= current_member.minecraftUUID%>/50.png" alt="">
       <h2><%= current_member.nickname %></h2>
     </div>
   <% else %>
     <div class="member-navigation flex not-signed-in">
-      <img src="http://cravatar.eu/avatar/steve.png" alt="">
+      <img src="http://cravatar.eu/avatar/steve/50.png" alt="">
       <%= link_to 'Iniciar sesión', new_member_session_path %>
     </div>
   <% end %>

@@ -15,9 +15,9 @@
       </div>
       <div class="button-space">
         <% if member_signed_in? == false %>
-          <span class="button">
+          <a href="/requests/new" class="button">
             ¿Quieres unirte?
-          </span>
+          </a>
         <% else %>
           <span class="button" id="hi">
             ¡Hola <%= current_member.name%>!
@@ -32,7 +32,11 @@
     <div class="container">
       <h3>Lo que hacemos</h3>
       <p class="about-content"><%= @communityConfig.about %></p>
-      <%= image_tag("icons.png", :class => "about-image") %>
+      <div class="about-image flex">
+        <%= image_tag 'minecraft-icons/tools/Iron Pickaxe.png' %>
+        <%= image_tag 'minecraft-icons/tools/Diamond Sword.png' %>
+        <%= image_tag 'minecraft-icons/tools/Gold Ingot.png' %>
+      </div>
     </div>
   </div>
 

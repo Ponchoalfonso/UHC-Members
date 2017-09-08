@@ -1,0 +1,58 @@
+// Place all the styles related to the Requests controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.newRequestPage{
+  color: white;
+  padding-top: 4em;
+  padding-right: 4em;
+  padding-left: 4em;
+  background: url(<%= asset_path 'default-backgrounds/blocks.png' %>);
+  background-position:50% 50%;
+  background-size:cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.requestContent{
+  display: table;
+  margin: auto;
+  position: absolute;
+  top: 3em; left: 4em; bottom: 0; right: 0;
+  vertical-align: middle;
+  margin-right: 0px;
+  background-color: #20212f;
+  padding: 1em;
+  border-radius: 6px;
+}
+
+.requestContent .field, .requestContent .actions{
+  padding: 0.5em;
+}
+
+.requestContent .actions{}
+
+.requestContent .field textarea, .requestContent .field input{
+  background-color: #282a40;
+  border: #191a25 solid 1px;
+  border-radius: 4px;
+  padding: 0.2em;
+}
+
+.requestContent .field input{
+  width: 14em;
+}
+
+.requestContent .field textarea{
+  width: 26em;
+  height: 4em;
+}
+
+.requestContent .actions{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.requestContent .actions input{
+  background-color: #4a639d;
+}

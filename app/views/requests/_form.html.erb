@@ -12,51 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
+    <p>Nombre</p>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :age %>
+    <p>Edad</p>
     <%= f.number_field :age %>
   </div>
 
   <div class="field">
-    <%= f.label :nickname %>
+    <p>Tu nombre de Minecraft</p>
     <%= f.text_field :nickname %>
   </div>
 
   <div class="field">
-    <%= f.label :minecraftUUID %>
-    <%= f.text_area :minecraftUUID %>
-  </div>
-
-  <div class="field">
-    <%= f.label :foundUs %>
+    <p>¿Cómo nos encontraste?</p>
     <%= f.text_area :foundUs %>
   </div>
 
   <div class="field">
-    <%= f.label :requestReason %>
+    <p>¿Por qué quieres unirte?</p>
     <%= f.text_area :requestReason %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
+    <p>Correo electrónico</p>
     <%= f.text_field :email %>
   </div>
 
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.text_field :status %>
-  </div>
-
-  <div class="field">
-    <%= f.label :ip %>
-    <%= f.text_field :ip %>
-  </div>
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enviar", :class => "button"%>
   </div>
 <% end %>

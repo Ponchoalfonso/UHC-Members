@@ -1,7 +1,8 @@
 class RecentsController < ApplicationController
   before_action :set_recent, only: [:show, :edit, :update, :destroy]
+  before_action :set_configs
   before_action :authenticate_member!
-  
+
   # GET /recents
   # GET /recents.json
   def index
@@ -74,5 +75,9 @@ class RecentsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def recent_params
       params.require(:recent).permit(:title, :body, :author, :photo)
+    end
+
+    def set_configs
+      @communityConfig = CommunityConfig.first
     end
 end

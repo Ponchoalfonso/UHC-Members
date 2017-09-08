@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'mojang'
 #Use Devise for authenticated sessions
 gem 'devise'
-#Use CanCan to manage Devise
-#gem 'cancan'
+#Use CanCanCan to manage Devise
+#gem 'cancancan', '~> 1.10'
 #Use paperclip for image proccessor
 gem "paperclip", "~> 5.0.0"
 

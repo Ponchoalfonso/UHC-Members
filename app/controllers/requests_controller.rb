@@ -2,7 +2,8 @@ require 'curb'
 require 'oj'
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_member!
+  before_action :set_configs
+  before_action :authenticate_member!, except: [:new, :create]
 
   # GET /requests
   # GET /requests.json
@@ -84,5 +85,9 @@ class RequestsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def request_params
       params.require(:request).permit(:name, :age, :nickname, :minecraftUUID, :foundUs, :requestReason, :email, :status, :ip)
+    end
+
+    def set_configs
+      @communityConfig = CommunityConfig.first
     end
 end
