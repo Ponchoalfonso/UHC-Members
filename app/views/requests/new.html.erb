@@ -2,17 +2,23 @@
 <%= render 'layouts/header' %>
 <section class="newRequestPage">
   <% if member_signed_in? %>
-    <div class="alredyin">
-      <h1>Q verga :v</h1>
+    <div class="alredyIn">
+      <h1>Ya eres miembro</h1>
+      <div class="rqButton">
+        <a href="/inicio" class="button">
+          Volver
+        </a>
+      </div>
+    </div>
+  <% else %>
+    <div class="requestContainer">
+      <div class="requestContent">
+        <div class="subtitle">
+          <h1>Llena tu solicitud</h1>
+        </div>
+        <%= render 'form', request: @request %>
+      </div>
     </div>
   <% end %>
-  <div class="requestContainer">
-    <div class="requestContent">
-      <div class="subtitle">
-        <h1>Llena tu solicitud</h1>
-      </div>
-      <%= render 'form', request: @request %>
-    </div>
-  </div>
 
 </section>
